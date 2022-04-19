@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500&display=swap');
+
+/*Resets*/
+*,
+*::before,
+::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+}
+
+img,
+picture{
+    max-width: 100%;
+    display: block;
+}
+
+/*custom properties*/
+
+:root{
+    /*colors*/
+    --clr-soft-blue: hsl(215, 51%, 70%);
+    --clr-cyan: hsl(178, 100%, 50%);
+    --clr-main-bg:hsl(217, 54%, 11%);
+    --clr-card-bg: hsl(216, 50%, 16%);
+    --clr-line: hsl(215, 32%, 27%);
+    --clr-white: hsl(0, 0%, 100%);
+
+    /*fonts*/
+    --ff-outfit: 'Outfit', sans-serif; 
+}
+
+/*layout*/
+
+body{
+    font-size: 1.2rem;
+    font-family: var(--ff-outfit) ;
+    height: 100vh;
+    background: var(--clr-main-bg);
+    color: var(--clr-white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.card__container{
+    background: var(--clr-card-bg) ;
+    max-width: 350px;
+    height: auto;
+    padding: 1.3rem;
+    border-radius: 1.2rem;
+    box-shadow: 0px 20px 25px 15px rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+}
+
+.card__container-image{
+   position: relative;
+   margin-bottom: 30px;
+}
+
+.card__container-image img{
+    border-radius: 20px;
+}
+
+.card__container-image::before{
+    content: url(./images/icon-view.svg);
+    position: absolute;
+    background: var(--clr-cyan);
+    inset: 0;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: all 0.25s ease;
+}
+
+.card__container-image:hover::before{
+    opacity: 0.5;
+}
+
+
+.card__container-product h1{
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+}
+
+.card__container-product h1 + p{
+    color: var(--clr-soft-blue);
+    margin-bottom: 20px;
+    line-height: 1.8rem;
+}
+
+.sales{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.sales h4,
+.sales p{
+font-weight: 300;
+display: flex;
+align-items: center;
+gap: 0.5rem;
+}
+
+.sales h4{
+    color: var(--clr-cyan);
+}
+
+
+.card__container-product h1:hover,
+.creator-name:hover{
+    color: var(--clr-cyan);
+}
+
+
+.footer{
+    display: flex;
+    align-items: center;
+    border-top: 2px solid var(--clr-line);
+    padding: 10px;
+}
+
+.footer p{
+    color: var(--clr-soft-blue);
+}
+
+.creator-name{
+    color: var(--clr-white);
+}
+
+.footer img{
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
+    border-radius: 50%;
+    border: 2px solid var(--clr-white);
+}
