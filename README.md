@@ -28,6 +28,10 @@ Users should be able to:
 - See hover states for interactive elements
 
 
+### Screenshots
+
+![Screenshot 2022-04-19 at 15-10-19 Frontend Mentor NFT preview card component](https://user-images.githubusercontent.com/84820874/164112872-db12ed5c-9a70-4f0f-b9ca-ce40c58cf448.png)
+
 ### Links
 
 - Solution URL: [Add solution URL here](https://your-solution-url.com)
